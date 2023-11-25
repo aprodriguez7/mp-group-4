@@ -1,0 +1,37 @@
+SQLPASSWORD: 
+
+$Qlbench3r20
+
+
+
+//ADJUSTMENTS WILL VARY
+try {
+            Connection conn;
+            conn = DriverManager.getConnection("<SQL Connection LIn>");
+            System.out.println("Connection Successful");
+            
+            PreparedStatement pstmt = conn.prepareStatement("SELECT MAX(CustomerID) + 1 AS ID FROM Customers");
+            ResultSet rst = pstmt.executeQuery();
+            while (rst.next()) {
+                CustomerID = rst.getInt("ID");
+            }
+
+            pstmt = conn.prepareStatement("INSERT INTO Customers (CustomerID, Lastname, Firstname, Middlename, Contactno, Address, RegisterDate, CreditLimit)"
+                    + " VALUE (?, ?, ?, ?, ?, ?, ?, ?)");
+            pstmt.setInt(1, CustomerID);
+            pstmt.setString(2, Lastname);
+            pstmt.setString(3, Firstname);
+            pstmt.setString(4, Middlename);
+            pstmt.setString(5, Contactno);
+            pstmt.setString(6, Address);
+            pstmt.setString(7, RegisterDate);
+            pstmt.setInt (8, CreditLimit);
+            pstmt.executeUpdate();
+            
+            pstmt.close();
+            conn.close();
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
