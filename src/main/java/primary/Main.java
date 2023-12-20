@@ -10,8 +10,11 @@ import javafx.stage.Stage;
  *     Initializes the welcome screen for the user to interact with and utilize
  *     for their usage of the program.
  * </p>
+ *
  * @author Arianne Acosta
+ *
  * @author Joy Arellano
+ *
  * @author Clark Rodriguez
  */
 public class Main extends Application {

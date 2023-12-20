@@ -2,6 +2,7 @@ module mp.ims.mpgroup4 {
     //For Database implementation
     requires java.sql;
     //For GUI Implementation
+    requires javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
