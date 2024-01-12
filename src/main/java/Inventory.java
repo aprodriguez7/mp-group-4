@@ -1,5 +1,3 @@
-package drivers.ims;
-
 /**
  * Primary class for the inventory management component of the project.
  * <p>
@@ -11,15 +9,12 @@ package drivers.ims;
  * @author Arianne Acosta
  * @author Joy Arellano
  * @author Clark Rodriguez
- */
-
-
-/**
- * CHECK MESSENGER FOR NOTES!!!
+ *
+ * @deprecated
  */
 
 import java.util.*;
-
+/*
 public class Inventory {
 
     private Map<String, InventoryItem> inventory;
@@ -28,6 +23,7 @@ public class Inventory {
         this.inventory = new HashMap<>();
     }
 
+    //teseter main
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Inventory inventoryManager = new Inventory();
@@ -83,6 +79,8 @@ public class Inventory {
 
     //Add case where user adds an item using SKU
     //Add case where user adds in bulk using CSV
+
+    //MIGRATE INTO CONTROLLER
     private void addItem(Scanner scanner) {
         System.out.print("\nEnter item name: ");
         String itemName = scanner.nextLine();
@@ -220,6 +218,7 @@ class InventoryItem {
         }
     }
 
+
     @Override
     public String toString() {
         StringBuilder itemDetails = new StringBuilder();
@@ -243,7 +242,7 @@ class InventoryItem {
         return itemDetails.toString();
     }
 
-    private String generateSKU(String category, String item) {
+    private String generateSKUSupport(String category, String item) {
         String key = category + "/" + item;
         if (!itemRandomNumberMap.containsKey(key)) {
             // Generate random 4-digit number if not generated for this item before
@@ -326,3 +325,4 @@ class InventoryItem {
     }
 
 }
+*/
