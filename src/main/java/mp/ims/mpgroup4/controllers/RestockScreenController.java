@@ -12,7 +12,7 @@ import java.util.InputMismatchException;
 
 public class RestockScreenController {
     @FXML
-    private TextField SKUField;
+    private TextField enterSKU;
     @FXML
     private TextField enterAmount;
     @FXML
@@ -55,7 +55,7 @@ public class RestockScreenController {
                 alert.setContentText("Enter positive values.");
                 alert.show();
             }else {
-                item.setSKU(SKUField.getText());
+                item.setSKU(enterSKU.getText());
                 item.setItem(itemLabel.getText());
                 item.setCategory(categoryLabel.getText());
                 item.setBrand(brandLabel.getText());
@@ -83,9 +83,9 @@ public class RestockScreenController {
     public void handleSearch(){
         try{
             Item item = new Item();
-            item.setSKU(SKUField.getText());
+            item.setSKU(enterSKU.getText());
 
-            row = ItemController.seleectSQL(SKUField.getText());
+            row = ItemController.seleectSQL(enterSKU.getText());
 
             String value1 = String.valueOf(row.get(1));
             String value2 = String.valueOf(row.get(2));

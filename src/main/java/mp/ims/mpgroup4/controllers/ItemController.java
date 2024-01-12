@@ -1,12 +1,14 @@
 package mp.ims.mpgroup4.controllers;
 
 import drivers.Item;
+import javafx.application.Platform;
 import javafx.fxml.Initializable;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import primary.Main;
@@ -42,6 +44,8 @@ public class ItemController implements Initializable {
     private TableColumn<Item, String> typeCol;
     @FXML
     private TableColumn<Item, String> descCol;
+    @FXML
+    private Button exitBut;
 
     public boolean addClicked = false;
     private Main main;
@@ -62,7 +66,7 @@ public class ItemController implements Initializable {
     public void handleAdd() throws  IOException{
         addClicked = true;
         Item newItem = new Item();
-        //PIN
+
         boolean okClicked = main.showAddScreen(newItem);
         rows = seleectSQL(newItem.getItem());
 
@@ -70,10 +74,27 @@ public class ItemController implements Initializable {
             main.getItemData().add(newItem);
             if(rows.isEmpty()){
                 addSQL(newItem);
-                updateTable();
+                System.out.println("Before runLater");
+                Platform.runLater(() -> {
+                    System.out.println("Inside runLater");
+                    try {
+                        updateTable();
+                        itemTable.refresh();
+                        System.out.println("Table updated");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+                System.out.println("After runLater");
+
             }else {
                 updateSQL(newItem);
-                updateTable();
+                Platform.runLater(() -> {
+                    updateTable();
+                    itemTable.refresh();
+                });
+                itemTable.refresh();
+                System.out.println("table updated via update");
             }
         }
     }
@@ -250,14 +271,14 @@ public class ItemController implements Initializable {
 
     public static ObservableList<Item> loadItems(){
         Connection connection = null;
-        Statement statement = null;
+        PreparedStatement statement = null;
 
         ObservableList<Item> lists = FXCollections.observableArrayList();
         try{
             //PIN: MANAGE DATABASE URL!!
             connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Ratatouille?user=root&password=$Qlbench3r20");
             statement = connection.prepareStatement("select * from Item");
-            ResultSet resultSet = statement.executeQuery("");
+            ResultSet resultSet = statement.executeQuery();
 
             while(resultSet.next()){
                 lists.add(new Item(resultSet.getString("SKU"), resultSet.getString("Item"),
@@ -267,7 +288,8 @@ public class ItemController implements Initializable {
                         resultSet.getString("Description")));
             }
         }catch (Exception e){
-
+            e.printStackTrace();
+            System.err.println("Error loading database");
         }
 
         return lists;
@@ -365,7 +387,7 @@ public class ItemController implements Initializable {
             String value8 = item.getType();
             String value9 = item.getDescription();
 
-            final String SQL_UPDATE = "UPDATE Ingredient set SKU='" + value1 + "', Item='" +
+            final String SQL_UPDATE = "UPDATE Item set SKU='" + value1 + "', Item='" +
                     value2 + "', Category='" + value3 + "', Brand='" + value4 + "', Amount='"
                     + value5 + "', Unit='" + value6 + "', Color='" + value7 + "', Type='"
                     + value8 + "', Description='" + value9 + "' WHERE SKU='" + value1 + "'";
@@ -426,10 +448,16 @@ public class ItemController implements Initializable {
         sizeCol.setCellValueFactory(cellData -> cellData.getValue().itemsizeProperty().asString());
         unitCol.setCellValueFactory(cellData -> cellData.getValue().unitProperty());
         colorCol.setCellValueFactory(cellData -> cellData.getValue().colorProperty());
+        typeCol.setCellValueFactory(cellData -> cellData.getValue().typeProperty());
         descCol.setCellValueFactory(cellData -> cellData.getValue().desciptionProperty());
 
         listItems = loadItems();
         itemTable.setItems(listItems);
+    }
+
+    @FXML
+    public void handleExit(){
+        System.exit(0);
     }
 
     //Manual Handling

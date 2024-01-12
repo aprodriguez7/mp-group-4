@@ -5,21 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06666f0c-3388-4e6a-9b07-4e4c5b703043" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ExportScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/imageassets/fat-rat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ExportScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/WelcomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/WelcomeScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/RestockScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/RestockScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/primary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/primary/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/WelcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/WelcomeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/fat rat.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,26 +43,60 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2ar7nodeUp7KVgXohsSyFJ1lEBC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main 2.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "guidev",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/DOWNLOADS/SECOND-YEAR/CS23-LAB/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\acrpr\Documents\cs23localab\mp-group-4\src\main\resources\mp\ims\mpgroup4" />
+      <recent name="C:\Users\acrpr\Documents\cs23localab\mp-group-4\src\main\resources\imageassets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main 2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="primary.Main" />
+      <module name="mp-group-4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,7 +105,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705065014706</updated>
+      <workItem from="1705080867558" duration="6905000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

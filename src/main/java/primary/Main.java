@@ -3,6 +3,7 @@ package primary;
 import drivers.Item;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -28,6 +29,9 @@ public class Main extends Application {
 
     private ObservableList<Item> itemData;
 
+    public Main(){
+        itemData = ItemController.loadItems();
+    }
     public ObservableList<Item> getItemData() {
         return itemData;
     }
@@ -61,7 +65,7 @@ public class Main extends Application {
         primaryStage.show();
         primaryStage.setTitle("Gusto's Inventory Management System");
         //PIN: Graphics!!!
-        primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
+        //primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("imageassets/fat rat.png")));
 
         ItemController itemcontrol = loader.getController();
         itemcontrol.setMain(this);
@@ -81,7 +85,7 @@ public class Main extends Application {
         popup.setScene(scene);
         popup.setTitle("Add Item Entry");
         //PIN: INSERT GRAPHICS
-        popup.getIcons().add(new Image(Main.class.getResourceAsStream("Header.png")));
+        //popup.getIcons().add(new Image(Main.class.getResourceAsStream("/imageassets/fat-rat.png")));
         popup.showAndWait();
         popup.setResizable(false);
 
@@ -102,7 +106,7 @@ public class Main extends Application {
         popup.setScene(scene);
         popup.setTitle("Update Existing Item Entry");
         //PIN: Graphics!!!
-        popup.getIcons().add(new Image(Main.class.getResourceAsStream("name.png")));
+        //popup.getIcons().add(new Image(Main.class.getResourceAsStream("src/main/resources/imageassets/fat rat.png")));
         popup.showAndWait();
         popup.setResizable(false);
 
@@ -123,7 +127,7 @@ public class Main extends Application {
         popup.setScene(scene);
         popup.setTitle("Restock Item Entry");
         //PIN: Graphics!!!
-        popup.getIcons().add(new Image(Main.class.getResourceAsStream("name.png")));
+        //popup.getIcons().add(new Image(Main.class.getResourceAsStream("src/main/resources/imageassets/fat rat.png")));
         popup.showAndWait();
         popup.setResizable(false);
 
@@ -144,7 +148,7 @@ public class Main extends Application {
         popup.setScene(scene);
         popup.setTitle("Item Usage");
         //PIN: Graphics!!!
-        popup.getIcons().add(new Image(Main.class.getResourceAsStream("name.png")));
+        //popup.getIcons().add(new Image(Main.class.getResourceAsStream("src/main/resources/imageassets/fat rat.png")));
         popup.showAndWait();
         popup.setResizable(false);
 
@@ -164,7 +168,7 @@ public class Main extends Application {
         popup.setScene(scene);
         popup.setTitle("Bulk Item Import via .csv");
         //PIN: Graphics!!!
-        popup.getIcons().add(new Image(Main.class.getResourceAsStream("name.png")));
+        //popup.getIcons().add(new Image(Main.class.getResourceAsStream("src/main/resources/imageassets/fat rat.png")));
         popup.showAndWait();
         popup.setResizable(false);
 

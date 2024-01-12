@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A27035;" stylesheets="@ims-view/design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp.ims.mpgroup4.controllers.ItemController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #A27035;" stylesheets="@ims-view/design.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp.ims.mpgroup4.controllers.ItemController">
    <children>
-      <TabPane layoutX="156.0" layoutY="27.0" prefHeight="362.0" prefWidth="432.0" style="-fx-background-color: #FDF0D5; -fx-border-radius: 20;" stylesheets="@ims-view/design.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="156.0" layoutY="27.0" prefHeight="672.0" prefWidth="1101.0" style="-fx-background-color: #FDF0D5; -fx-border-radius: 20;" stylesheets="@ims-view/design.css" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab style="-fx-background-color: #D7B084;" text="About">
             <content>
@@ -20,14 +15,14 @@
           </Tab>
             <Tab style="-fx-background-color: #D7B084;" text="Help">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="385.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="308.0" prefWidth="500.0" />
                </content>
             </Tab>
           <Tab style="-fx-background-color: #D7B084;" text="Menu">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="459.0">
                      <children>
-                        <TabPane layoutX="19.0" layoutY="26.0" prefHeight="275.0" prefWidth="399.0" tabClosingPolicy="UNAVAILABLE">
+                        <TabPane layoutX="19.0" layoutY="26.0" prefHeight="593.0" prefWidth="1067.0" tabClosingPolicy="UNAVAILABLE">
                           <tabs>
                             <Tab text="Appetizers">
                               <content>
@@ -46,7 +41,7 @@
                               </Tab>
                               <Tab text="Desserts">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="236.0" prefWidth="767.0" />
                                  </content>
                               </Tab>
                           </tabs>
@@ -62,19 +57,19 @@
             </Tab>
             <Tab style="-fx-background-color: #D7B084;" text="Inventory">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="385.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="579.0" prefWidth="939.0">
                      <children>
-                        <TableView fx:id="itemTable" layoutX="14.0" layoutY="27.0" prefHeight="270.0" prefWidth="406.0">
+                        <TableView fx:id="itemTable" layoutY="25.0" prefHeight="608.0" prefWidth="1101.0">
                           <columns>
-                            <TableColumn fx:id="skuCol" prefWidth="37.0" text="SKU" />
-                            <TableColumn fx:id="itemCol" prefWidth="73.0" text="ITEM" />
-                              <TableColumn fx:id="categoryCol" prefWidth="76.0" text="CATEGORY" />
-                              <TableColumn fx:id="brandCol" prefWidth="70.0" text="BRAND" />
-                              <TableColumn fx:id="sizeCol" prefWidth="84.0" text="AMOUNT" />
-                              <TableColumn fx:id="unitCol" prefWidth="110.0" text="UNITS" />
-                              <TableColumn fx:id="colorCol" prefWidth="75.0" text="COLOR" />
-                              <TableColumn fx:id="typeCol" prefWidth="75.0" text="TYPE" />
-                              <TableColumn fx:id="descCol" prefWidth="75.0" text="DESCRIPTION" />
+                            <TableColumn fx:id="skuCol" prefWidth="158.0" text="SKU" />
+                            <TableColumn fx:id="itemCol" prefWidth="118.0" text="ITEM" />
+                              <TableColumn fx:id="categoryCol" prefWidth="103.0" text="CATEGORY" />
+                              <TableColumn fx:id="brandCol" minWidth="5.0" prefWidth="73.0" text="BRAND" />
+                              <TableColumn fx:id="sizeCol" prefWidth="95.0" text="AMOUNT" />
+                              <TableColumn fx:id="unitCol" prefWidth="72.0" text="UNITS" />
+                              <TableColumn fx:id="colorCol" prefWidth="123.0" text="COLOR" />
+                              <TableColumn fx:id="typeCol" prefWidth="114.0" text="TYPE" />
+                              <TableColumn fx:id="descCol" prefWidth="244.0" text="DESCRIPTION" />
                           </columns>
                         </TableView>
                      </children>
@@ -83,16 +78,16 @@
             </Tab>
         </tabs>
       </TabPane>
-      <Button layoutX="13.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="25.0" prefWidth="131.0" text="Item Usage" textAlignment="CENTER" />
-      <Button layoutX="14.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="131.0" text="Add Item" textAlignment="CENTER" />
-      <Button layoutX="82.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Exit" />
-      <Button layoutX="13.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="131.0" text="Delete Item" textAlignment="CENTER" />
+      <Button layoutX="13.0" layoutY="551.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="25.0" prefWidth="131.0" text="Item Usage" textAlignment="CENTER" />
+      <Button layoutX="14.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="131.0" text="Add Item" textAlignment="CENTER" />
+      <Button fx:id="exitBut" layoutX="82.0" layoutY="590.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="25.0" prefWidth="65.0" text="Exit" />
+      <Button layoutX="13.0" layoutY="514.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="131.0" text="Delete Item" textAlignment="CENTER" />
       <ImageView fitHeight="118.0" fitWidth="113.0" layoutX="23.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@ims-view/fat%20rat.png" />
+            <Image url="@imageassets/fat-rat.png" />
          </image>
       </ImageView>
-      <Button layoutX="14.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleRestock" prefHeight="25.0" prefWidth="131.0" text="Restock Item" textAlignment="CENTER" />
-      <Button layoutX="13.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleImport" prefHeight="25.0" prefWidth="65.0" text="Import" />
+      <Button layoutX="14.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleRestock" prefHeight="25.0" prefWidth="131.0" text="Restock Item" textAlignment="CENTER" />
+      <Button layoutX="13.0" layoutY="590.0" mnemonicParsing="false" onAction="#handleImport" prefHeight="25.0" prefWidth="65.0" text="Import" />
    </children>
 </AnchorPane>
