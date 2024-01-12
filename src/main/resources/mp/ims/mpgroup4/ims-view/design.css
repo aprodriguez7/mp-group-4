@@ -1,63 +1,62 @@
-
+/* TAB */
 .tab{
--fx-background-color: #BF8C69;
+-fx-background-color: #c98a60;
 -fx-padding: 6 12.5 6 13.7;
 -fx-font-size: 12pt;
 }
 
 .tab-item{
--fx-background-color: #ECE5DD;
+-fx-background-color:#FEF8EC;
 }
 
 .tab:selected{
--fx-background-color:#D6BB9D;
+-fx-background-color:#f8bd79;
 }
 
 .tab-item:hover{
--fx-background-color: #A27657;
+-fx-background-color: #c2885e;
 }
 
-.tab:focused{
--fx-focus-color: transparent;
-}
-
+/* BUTTONS */
 .button{
--fx-background-color: #D6BB9D;
--fx-border-width:1;
--fx-border-color: #CDB397;
+-fx-background-color: #d8b286;
+-fx-border-color: #d8b286;
 }
 
 .button:hover{
--fx-background-color: #C69D70;
+-fx-background-color: #b1895e;
 -fx-border-width:1;
--fx-border-color: #C69D70;
+-fx-border-color: #b1895e;
 }
 
 .button:selected{
--fx-background-color: #ECE5DD;
--fx-border-width:1;
--fx-border-color: #ECE5DD;
+-fx-background-color: #FEF8EC;
+-fx-border-width:10;
+-fx-border-color: #FEF8EC;
 }
 
+
+/* TABLE VIEW */
 .table-view{
 -fx-background-color: #ECE5DD;
 }
 
-.table-view:focused{
--fx-background-color: #ECE5DD;
-}
-
 .table-view .column-header{
--fx-background-color:#D6BB9D;
+-fx-background-color:#d8a064;
 }
 
 .table-row-cell:even{
--fx-background-color: #DFD6CB;
+-fx-background-color: #c7beb3;
 }
 .table-row-cell:odd{
--fx-background-color: #ECE5DD;
+-fx-background-color: #eceae6;
 }
 
 .table-row-cell:selected{
--fx-background-color: #C69D70;
+-fx-background-color: #b89168;
 }
+
+
+.table-view:focused{
+    -fx-background-color: #ECE5DD;
+    }
