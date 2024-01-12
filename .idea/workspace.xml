@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06666f0c-3388-4e6a-9b07-4e4c5b703043" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ExportScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/imageassets/fat-rat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ExportScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/Asset 1 transparent hole.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/Asset_1-removebg-preview.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/RestockScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/RestockScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/primary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/primary/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/WelcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/WelcomeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/fat rat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/design.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/design.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
     "Application.Main 2.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "guidev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/DOWNLOADS/SECOND-YEAR/CS23-LAB/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
     "node.js.detected.package.eslint": "true",
