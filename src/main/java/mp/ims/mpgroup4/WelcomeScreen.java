@@ -1,5 +1,8 @@
 package mp.ims.mpgroup4;
 
+import javafx.fxml.FXML;
+import primary.Main;
+
 /**
  * Controller class for the Welcome Screen
  * <p>
@@ -9,5 +12,8 @@ package mp.ims.mpgroup4;
  * @author Joy Arellano
  * @author Clark Rodriguez
  */
-public class WelcomeScreen {
+public class WelcomeScreen
+{
+
+    // can be deleted, no implementation
 }

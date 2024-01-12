@@ -4,43 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24213330-f9e7-409c-be0d-a6fe81e239bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/drivers/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/AddScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ImportScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemUsageScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/RestockScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/UpdateScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" afterDir="false" />
+    <list default="true" id="06666f0c-3388-4e6a-9b07-4e4c5b703043" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drivers/FileHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drivers/Restaurant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drivers/ims/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drivers/ims/SQL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/primary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/primary/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/WelcomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/WelcomeScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/WelcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/WelcomeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="package-info" />
-        <option value="Class" />
-        <option value="FxmlFile" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,96 +34,35 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2aiOiR7jwojKej9cNmVydckTsYD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2ar7nodeUp7KVgXohsSyFJ1lEBC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main (Plain Demo).executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/acrpr/Desktop/S14-09 DBAPP/S14-09 DBAPP/S14-09-DBAPP/S14-09-DBAPP",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
+    "git-widget-placeholder": "guidev",
+    "last_opened_file_path": "D:/DOWNLOADS/SECOND-YEAR/CS23-LAB/openjfx-21.0.1_windows-x64_bin-sdk/javafx-sdk-21.0.1/lib",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.16015625",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\acrpr\Documents\cs23localab\mp-group-4\src\main\java" />
-      <recent name="C:\Users\acrpr\Documents\cs23localab\mp-group-4\src\main\java\drivers" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Main (Plain Demo)" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="primary.Main" />
-      <module name="mp-group-4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="mp-group-4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="mp-group-4" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-20.0.2-azul-20.0.2-3183f394aec4-4edb7f01" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="24213330-f9e7-409c-be0d-a6fe81e239bf" name="Changes" comment="" />
-      <created>1704798059687</created>
+      <changelist id="06666f0c-3388-4e6a-9b07-4e4c5b703043" name="Changes" comment="" />
+      <created>1705065014706</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704798059687</updated>
-      <workItem from="1704798060692" duration="872000" />
-      <workItem from="1704847305543" duration="669000" />
-      <workItem from="1705016813102" duration="1647000" />
+      <updated>1705065014706</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
