@@ -11,7 +11,7 @@ module mp.ims.mpgroup4 {
 
     opens mp.ims.mpgroup4 to javafx.fxml;
     opens mp.ims.mpgroup4.controllers to javafx.fxml;
-    exports mp.ims.mpgroup4;
+    //exports mp.ims.mpgroup4;
     exports primary;
     exports mp.ims.mpgroup4.controllers;
 }
