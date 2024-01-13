@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06666f0c-3388-4e6a-9b07-4e4c5b703043" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TEST CASES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imageassets/easteregg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/assets/BOLDSTROM D.OTF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/assets/import1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/assets/import2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/outfiles/exported_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/drivers/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drivers/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/WelcomeScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/AddScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/AddScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ExportScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ExportScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ImportScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ImportScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemUsageScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/ItemUsageScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/RestockScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/RestockScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/UpdateScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mp/ims/mpgroup4/controllers/UpdateScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/primary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/primary/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/WelcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/WelcomeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/imageassets/fat-rat.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/imageassets/fat-rat.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/AddScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/Asset 1 transparent hole.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/imageassets/Asset 1 transparent hole.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/Asset_1-removebg-preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/imageassets/Asset_1-removebg-preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ExportScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ExportScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ImportScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/ItemUsageScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/RestockScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/UpdateScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/design.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mp/ims/mpgroup4/ims-view/design.css" afterDir="false" />
-    </list>
+    <list default="true" id="06666f0c-3388-4e6a-9b07-4e4c5b703043" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +97,7 @@
       <updated>1705065014706</updated>
       <workItem from="1705080867558" duration="8913000" />
       <workItem from="1705090128768" duration="1459000" />
-      <workItem from="1705094064039" duration="12281000" />
+      <workItem from="1705094064039" duration="12684000" />
     </task>
     <servers />
   </component>
