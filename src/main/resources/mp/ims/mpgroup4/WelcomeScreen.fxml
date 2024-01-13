@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #33180B;" stylesheets="@ims-view/design.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp.ims.mpgroup4.controllers.ItemController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #33180B;" stylesheets="@ims-view/design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp.ims.mpgroup4.controllers.ItemController">
     <children>
-        <Circle layoutX="160.0" layoutY="162.0" radius="110.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fill="WHITE" layoutX="160.0" layoutY="162.0" radius="110.0" stroke="BLACK" strokeType="INSIDE" />
         <TabPane layoutX="317.0" layoutY="56.0" prefHeight="628.0" prefWidth="942.0" style="-fx-background-color: #FEF8EC; -fx-border-radius: 17px; -fx-background-radius: 25px; -fx-border-width: 10px; -fx-border-color: #000000;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab style="-fx-background-color: #D7B084;" text="INVENTORY">
@@ -44,7 +51,14 @@
                 </Tab>
                 <Tab style="-fx-background-color: #D7B084;" text="About">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="419.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="419.0">
+                     <children>
+                        <ImageView fitHeight="177.0" fitWidth="191.0" layoutX="247.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imageassets/fat-rat.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
                     </content>
                 </Tab>
                 <Tab style="-fx-background-color: #D7B084;" text="Help">
@@ -60,23 +74,133 @@
                                     <tabs>
                                         <Tab text="Appetizers">
                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="429.0" />
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="429.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="188.0" layoutX="339.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+                                          <ImageView fx:id="app2" fitHeight="191.0" fitWidth="199.0" layoutX="324.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Appetizer/escargots.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="188.0" layoutX="587.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="188.0" layoutX="87.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+                                          <ImageView fx:id="app1" fitHeight="193.0" fitWidth="218.0" layoutX="72.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Appetizer/quiche.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="app3" fitHeight="191.0" fitWidth="194.0" layoutX="574.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Appetizer/french%20onion%20soup%20final.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="120.0" layoutY="308.0" text="Quiche">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="355.0" layoutY="306.0" text="Escargots">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="543.0" layoutY="304.0" prefHeight="45.0" prefWidth="270.0" text="French Onion Soup">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
                                             </content>
                                         </Tab>
                                         <Tab text="Main Course">
-                                            <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="798.0" />
-                                            </content>
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="429.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="256.0" layoutX="394.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" width="341.0" />
+                                          <ImageView fx:id="main2" fitHeight="252.0" fitWidth="340.0" layoutX="387.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Main/Ratatouille.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="303.0" layoutX="82.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="201.0" />
+                                          <ImageView fx:id="main1" fitHeight="310.0" fitWidth="432.0" layoutX="67.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Main/Coq%20Au%20Vin.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="105.0" layoutY="379.0" text="Coq Au Vin">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="480.0" layoutY="381.0" text="Ratatouille">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
                                         </Tab>
                                         <Tab text="Side Dishes">
-                                            <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                            </content>
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="429.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="255.0" layoutX="494.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="237.0" />
+                                          <ImageView fx:id="side2" fitHeight="275.0" fitWidth="252.0" layoutX="467.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Side%20Dish/Green%20Beans%20Almondine.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="262.0" layoutX="131.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" width="260.0" />
+                                          <ImageView fx:id="side1" fitHeight="273.0" fitWidth="261.0" layoutX="119.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Side%20Dish/Pommes%20Frites.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="157.0" layoutY="371.0" text="Pomme Frites">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="429.0" layoutY="370.0" text="Green Beans Almondine">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
                                         </Tab>
                                         <Tab text="Desserts">
-                                            <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="827.0" />
-                                            </content>
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="429.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="255.0" layoutX="494.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="237.0" />
+                                          <ImageView fx:id="dess2" fitHeight="275.0" fitWidth="252.0" layoutX="467.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Dessert/Creme%20Bruleee.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" height="262.0" layoutX="131.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" width="260.0" />
+                                          <ImageView fx:id="dess1" fitHeight="273.0" fitWidth="261.0" layoutX="119.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../imageassets/menu/Dessert/Chocolate%20Souffle.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="145.0" layoutY="377.0" text="Chocolate Souffle">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="495.0" layoutY="377.0" text="Creme Brulee">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
                                         </Tab>
                                     </tabs>
                                 </TabPane>
@@ -85,9 +209,81 @@
                     </content>
                 </Tab>
                 <Tab style="-fx-background-color: #D7B084;" text="Merchandise">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="459.0" />
-                    </content>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="429.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="188.0" layoutX="339.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+                        <ImageView fx:id="app21" fitHeight="191.0" fitWidth="199.0" layoutX="324.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imageassets/menu/Appetizer/escargots.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="188.0" layoutX="587.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="188.0" layoutX="87.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+                        <ImageView fx:id="app11" fitHeight="193.0" fitWidth="218.0" layoutX="72.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imageassets/menu/Appetizer/quiche.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="app31" fitHeight="191.0" fitWidth="194.0" layoutX="574.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imageassets/menu/Appetizer/french%20onion%20soup%20final.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="120.0" layoutY="308.0" text="Quiche">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="355.0" layoutY="306.0" text="Escargots">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="543.0" layoutY="304.0" prefHeight="45.0" prefWidth="270.0" text="French Onion Soup">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="429.0">
+                     <children>
+                        <ImageView fx:id="merch2" fitHeight="251.0" fitWidth="195.0" layoutX="324.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imageassets/merch/gusto's%20cap%202.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="merch1" fitHeight="271.0" fitWidth="195.0" layoutX="72.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imageassets/merch/gusto's%20tote%205.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="merch3" fitHeight="250.0" fitWidth="195.0" layoutX="620.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imageassets/merch/gusto's%20mug%201.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="118.0" layoutY="402.0" text="Tote">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="377.0" layoutY="404.0" text="Cap">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="597.0" layoutY="395.0" prefHeight="45.0" prefWidth="270.0" text="Mug">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
                 </Tab>
             </tabs>
         </TabPane>
