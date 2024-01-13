@@ -53,11 +53,12 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="419.0">
                      <children>
-                        <ImageView fitHeight="177.0" fitWidth="191.0" layoutX="247.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="177.0" fitWidth="191.0" layoutX="34.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../imageassets/fat-rat.png" />
                            </image>
                         </ImageView>
+                        <Label layoutX="199.0" layoutY="242.0" prefHeight="164.0" prefWidth="524.0" text="A casual Family-style French restaurant dedicated to serving hearty and comforting traditional French cuisine" textAlignment="CENTER" wrapText="true" />
                      </children></AnchorPane>
                     </content>
                 </Tab>

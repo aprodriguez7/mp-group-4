@@ -31,6 +31,9 @@ public class Main extends Application {
 
     private ObservableList<Item> itemData;
 
+    /**
+     * Default constructor for Main class.
+     */
     public Main(){
         itemData = ItemController.loadItems();
     }
@@ -225,7 +228,7 @@ public class Main extends Application {
         return control.okClicked;
     }
 
-    public boolean showExportScreen() throws IOException {
+    public boolean showExportScreen() throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/mp/ims/mpgroup4/ims-view/ExportScreen.fxml"));
         Parent root = loader.load();
 
@@ -236,18 +239,12 @@ public class Main extends Application {
         control.setPopup(popup);
 
         popup.setScene(scene);
-        popup.setTitle("Bulk Item Import via .csv");
+        popup.setTitle("Export Current Inventory as .csv File");
         Image appicon = new Image(getClass().getResourceAsStream("/imageassets/fat-rat.png"));
         popup.getIcons().add(appicon);
         popup.showAndWait();
         popup.setResizable(false);
 
         return control.okClicked;
-    }
-    /**
-     * Opens the User Manual. The method uses the host services to show
-     */
-    public void pdf(){
-        getHostServices().showDocument(getClass().getResource("pdf").toString());
     }
 }

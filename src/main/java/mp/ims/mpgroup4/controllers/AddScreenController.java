@@ -16,6 +16,9 @@ import javafx.stage.Stage;
  * @author Clark Rodriguez
  */
 public class AddScreenController {
+
+    @FXML
+    private TextField enterSKU;
     @FXML
     private TextField enterItem;
     @FXML
@@ -139,11 +142,13 @@ public class AddScreenController {
      * Searches for an item and populates the form with its details if found.
      */
     public void handleSearch(){
+        Item item = new Item();
 
-        item.setItem(enterItem.getText());
-        row = ItemController.searchbyItem(item.getItem());
+        item.setSKU(enterSKU.getText());
+        row = ItemController.searchbySKU(enterSKU.getText());
 
         if(!row.isEmpty()){
+            enterItem.setText(row.get(1));
             enterCategory.setText(row.get(2));
             enterBrand.setText(row.get(3));
             enterUnit.setText(row.get(5));

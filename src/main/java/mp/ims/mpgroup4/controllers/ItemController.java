@@ -225,6 +225,10 @@ public class ItemController implements Initializable {
         }
     }
 
+
+    /**
+     * Handles the exporting of the current inventory to a .csv to the user specified directory.
+     */
     public void handleExport(){
         try{
             boolean okClicked = main.showExportScreen();
@@ -235,6 +239,7 @@ public class ItemController implements Initializable {
             alert.show();
         }
     }
+
     /**
      * Generates an SKU for the given item based on its category and name. Invokes support method
      * to generate the various components.
@@ -640,10 +645,4 @@ public class ItemController implements Initializable {
         }
         return null;
     }
-
-
-    /**
-     * Void method to handle opening the User Manual.
-     */
-    public void openPDF(){main.pdf();}
 }

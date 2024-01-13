@@ -1,10 +1,19 @@
-BVR/MNT-6214,Mountain Dew,Beverage,PepsiCo,355,mL,Yellow,Can,"Citrus"
-BVR/PPS-2876,Pepsi,Beverage,Pepsi,500,mL,Blue,Can,"Refreshing"
-BVR/RNG-6967,Orange Juice,Beverage,Tropicana,1,L,Orange,Bottle,"Pulp-Free"
-BVR/SPR-3511,Sprite,Beverage,Coca-Cola,750,mL,Green,Bottle,"Lemon-Lime"
-BVR/WTR-8476,Water,Beverage,Evian,500,mL,Clear,Bottle,"Natural Spring"
-CLD/CDT-2868,Iced Tea,Cold Beverage,Lipton,5,L,Transparent,Bottle,"Sweetened"
-DRY/MLK-4218,Milk,Dairy,Amul,1,L,White,Carton,"Full Fat"
-HTB/CFF-5935,Coffee,Hot Beverage,Starbucks,12,oz,Brown,Cup,"Medium Roast"
-NNL/FRT-6135,Fruit Punch,Non-Alcoholic Punch,Ocean Spray,64,oz,Multi-color,Bottle,"Mixed Fruit"
-NRG/RDB-4086,Red Bull,Energy Drink,Red Bull,250,mL,Silver,Can,"High Energy"
+BVR/MNT-6624,Mountain Dew,Beverage,PepsiCo,355,mL,Yellow,Can,"Citrus"
+BVR/PPS-2919,Pepsi,Beverage,Pepsi,500,mL,Blue,Can,"Refreshing"
+BVR/RNG-9856,Orange Juice,Beverage,Tropicana,1,L,Orange,Bottle,"Pulp-Free"
+BVR/SPR-3171,Sprite,Beverage,Coca-Cola,750,mL,Green,Bottle,"Lemon-Lime"
+BVR/WHT-8596,White Wine,Beverage,Alcoholic,2,L,Purple,Bottle,Expensive
+BVR/WTR-7523,Water,Beverage,Evian,500,mL,Clear,Bottle,"Natural Spring"
+CLD/CDT-4311,Iced Tea,Cold Beverage,Lipton,5,L,Transparent,Bottle,"Sweetened"
+CND/BTT-3049,Butter,Condiment,Queensland,238,g,Yellow,Solid,Expensive
+CND/PPP-6903,Pepper,Conidment,McCormick,2,kg,Black,Whole,Heavy
+CND/SLT-3480,Salt,Condiment,Brand X,2,kg,White,Rock,Salty
+DRY/MLK-7082,Milk,Dairy,Amul,1,L,White,Carton,"Full Fat"
+HTB/CFF-6404,Coffee,Hot Beverage,Starbucks,12,oz,Brown,Cup,"Medium Roast"
+MET/SCR-6427,Escargot,Meat,Local,16,pcs,Black,French,Seafood
+NNL/FRT-2169,Fruit Punch,Non-Alcoholic Punch,Ocean Spray,64,oz,Multi-color,Bottle,"Mixed Fruit"
+NRG/RDB-5514,Red Bull,Energy Drink,Red Bull,250,mL,Silver,Can,"High Energy"
+PLT/CHC-0851,Chicken,Poultry,Bounty Fresh,2,kg,Pink,Fresh,"Cute"
+PRD/EGG-0714,Egg,Produce,Tindahan ni Arianne,12,pcs,White,Chicken,Fragile
+VGT/GRL-6558,Garlic,Vegetable,Local,5,pcs,White,Raw,Fresh
+VGT/SHL-1573,Shallot,Vegetable,Local,20,pcs,White,Wet,Cool
