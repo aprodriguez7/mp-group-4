@@ -1,0 +1,8 @@
+TEST CASES:
+
+IMPORT:
+src/main/resources/mp/ims/mpgroup4/assets/import2.csv\
+
+
+EXPORT:
+C:\Users\acrpr\Documents\cs23localab\mp-group-4\src\main\resources\outfiles\exported_data.csv

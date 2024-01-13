@@ -60,3 +60,7 @@
 .table-view:focused{
     -fx-background-color: #ECE5DD;
     }
+
+.custom-font {
+    -fx-font-family: 'BOLDSTROM D';
+}

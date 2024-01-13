@@ -8,6 +8,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * Controller class for the ItemUsageScreen popup
+ *
+ * Contains methods for detailing item usage in the inventory screen.
+ *
+ * @author Arianne Acosta
+ * @author Joy Arellano
+ * @author Clark Rodriguez
+ */
 public class ItemUsageScreenController {
     @FXML
     private TextField enterSKU;
@@ -37,10 +46,21 @@ public class ItemUsageScreenController {
     private int originalValue;
     private int newValue;
 
+    /**
+     * Sets the popup stage for this controller.
+     * @param popup The popup stage.
+     */
     public void setPopup(Stage popup){this.popup = popup;}
 
+    /**
+     * Sets the item for which usage is being recorded.
+     * @param item The item to set.
+     */
     public void setItem(Item item){this.item = item;}
 
+    /**
+     * Handles the OK button click event.
+     */
     public void handleOK(){
         try{
             usage = Integer.parseInt(enterUsage.getText());
@@ -77,12 +97,15 @@ public class ItemUsageScreenController {
         }
     }
 
+    /**
+     * Handles the Search button click event.
+     */
     public void handleSearch(){
         try{
             Item item = new Item();
             item.setSKU(enterSKU.getText());
 
-            row = ItemController.seleectSQL(enterSKU.getText());
+            row = ItemController.searchbySKU(enterSKU.getText());
 
             String value1 = String.valueOf(row.get(1));
             String value2 = String.valueOf(row.get(2));
@@ -108,5 +131,8 @@ public class ItemUsageScreenController {
         }
     }
 
+    /**
+     * Handles the Cancel button click event.
+     */
     public void handleCancel(){popup.close();}
 }

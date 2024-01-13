@@ -40,10 +40,25 @@ public class RestockScreenController {
     private int formeramount;
     private int newamount;
 
+    /**
+     * Sets the popup stage for this controller.
+     *
+     * @param popup The Stage to be set as the popup stage.
+     */
     public void setPopup(Stage popup){this.popup = popup;}
 
+    /**
+     * Sets the item to be restocked.
+     *
+     * @param item The Item object representing the item to be restocked.
+     */
     public void setItem(Item item){this.item = item;}
 
+    /**
+     * Handles the OK button click event.
+     * Updates item information based on user input and closes the popup if successful.
+     * Displays a warning if input values are invalid.
+     */
     public void handleOK(){
         try{
             amountAdd = Integer.parseInt(enterAmount.getText());
@@ -80,12 +95,17 @@ public class RestockScreenController {
         }
     }
 
+    /**
+     * Handles the Search button click event.
+     * Searches for an item based on the entered SKU and updates the interface with the item details.
+     * Displays a warning if the SKU is not found.
+     */
     public void handleSearch(){
         try{
             Item item = new Item();
             item.setSKU(enterSKU.getText());
 
-            row = ItemController.seleectSQL(enterSKU.getText());
+            row = ItemController.searchbySKU(enterSKU.getText());
 
             String value1 = String.valueOf(row.get(1));
             String value2 = String.valueOf(row.get(2));
@@ -111,5 +131,9 @@ public class RestockScreenController {
         }
     }
 
+    /**
+     * Handles the Cancel button click event.
+     * Closes the restock popup.
+     */
     public void handleCancel() {popup.close();}
 }

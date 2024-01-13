@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #33180B;" stylesheets="@ims-view/design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp.ims.mpgroup4.controllers.ItemController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #33180B;" stylesheets="@ims-view/design.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp.ims.mpgroup4.controllers.ItemController">
     <children>
         <Circle layoutX="160.0" layoutY="162.0" radius="110.0" stroke="BLACK" strokeType="INSIDE" />
         <TabPane layoutX="317.0" layoutY="56.0" prefHeight="628.0" prefWidth="942.0" style="-fx-background-color: #FEF8EC; -fx-border-radius: 17px; -fx-background-radius: 25px; -fx-border-width: 10px; -fx-border-color: #000000;" tabClosingPolicy="UNAVAILABLE">
@@ -20,17 +15,17 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="385.0">
                             <children>
-                                <TableView fx:id="itemTable" layoutX="90.0" layoutY="21.0" prefHeight="445.0" prefWidth="742.0">
+                                <TableView fx:id="itemTable" layoutX="35.0" layoutY="21.0" prefHeight="445.0" prefWidth="856.0">
                                     <columns>
-                                        <TableColumn fx:id="skuCol" prefWidth="37.0" text="SKU" />
-                                        <TableColumn fx:id="itemCol" prefWidth="73.0" text="ITEM" />
-                                        <TableColumn fx:id="categoryCol" prefWidth="76.0" text="CATEGORY" />
-                                        <TableColumn fx:id="brandCol" prefWidth="70.0" text="BRAND" />
-                                        <TableColumn fx:id="sizeCol" prefWidth="84.0" text="AMOUNT" />
-                                        <TableColumn fx:id="unitCol" prefWidth="110.0" text="UNITS" />
-                                        <TableColumn fx:id="colorCol" prefWidth="75.0" text="COLOR" />
-                                        <TableColumn fx:id="typeCol" prefWidth="75.0" text="TYPE" />
-                                        <TableColumn fx:id="descCol" prefWidth="140.3333740234375" text="DESCRIPTION" />
+                                        <TableColumn fx:id="skuCol" prefWidth="105.0" text="SKU" />
+                                        <TableColumn fx:id="itemCol" prefWidth="108.0" text="ITEM" />
+                                        <TableColumn fx:id="categoryCol" prefWidth="77.0" text="CATEGORY" />
+                                        <TableColumn fx:id="brandCol" prefWidth="85.0" text="BRAND" />
+                                        <TableColumn fx:id="sizeCol" prefWidth="64.0" text="AMOUNT" />
+                                        <TableColumn fx:id="unitCol" prefWidth="47.0" text="UNITS" />
+                                        <TableColumn fx:id="colorCol" prefWidth="81.0" text="COLOR" />
+                                        <TableColumn fx:id="typeCol" prefWidth="101.0" text="TYPE" />
+                                        <TableColumn fx:id="descCol" prefWidth="186.0" text="DESCRIPTION" />
                                     </columns>
                                 </TableView>
                                 <Button layoutX="155.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px;" text="Delete Item" textAlignment="CENTER">
@@ -100,26 +95,30 @@
             <font>
                 <Font name="Boldstrom" size="19.0" />
             </font></Button>
-        <Button layoutX="166.0" layoutY="634.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" text="Exit">
+        <Button layoutX="101.0" layoutY="635.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" text="Exit">
             <font>
                 <Font name="Boldstrom" size="15.0" />
             </font></Button>
         <ImageView fitHeight="177.0" fitWidth="191.0" layoutX="68.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@imageassets/fat-rat.png" />
+                <Image url="@../../../imageassets/fat-rat.png" />
             </image>
         </ImageView>
         <Button layoutX="55.0" layoutY="442.0" mnemonicParsing="false" onAction="#handleRestock" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px;" text="Restock Item" textAlignment="CENTER">
             <font>
                 <Font name="Boldstrom" size="19.0" />
             </font></Button>
-        <Button layoutX="37.0" layoutY="634.0" mnemonicParsing="false" onAction="#handleImport" prefHeight="35.0" prefWidth="110.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px;" text="Import">
+        <Button layoutX="34.0" layoutY="584.0" mnemonicParsing="false" onAction="#handleImport" prefHeight="35.0" prefWidth="110.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px;" text="Import">
+            <font>
+                <Font name="Boldstrom" size="15.0" />
+            </font></Button>
+        <Button layoutX="166.0" layoutY="584.0" mnemonicParsing="false" onAction="#handleExport" prefHeight="35.0" prefWidth="110.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px;" text="Export">
             <font>
                 <Font name="Boldstrom" size="15.0" />
             </font></Button>
         <ImageView fitHeight="59.0" fitWidth="266.0" layoutX="34.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@ims-view/Asset_1-removebg-preview.png" />
+                <Image url="@../../../imageassets/Asset_1-removebg-preview.png" />
             </image>
         </ImageView>
         <Button layoutX="56.0" layoutY="370.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="50.0" prefWidth="200.0" style="-fx-border-radius: 20px; -fx-background-radius: 20px;" text="Add Item" textAlignment="CENTER">

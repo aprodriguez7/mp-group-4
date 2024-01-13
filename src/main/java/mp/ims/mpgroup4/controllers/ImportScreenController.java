@@ -10,6 +10,13 @@ import javafx.stage.Stage;
 
 import java.io.*;
 
+/**
+ * Controller class for the ImportScreen.fxml file, responsible for handling user interactions related to importing data from CSV files.
+ *
+ * @author Arianne Acosta
+ * @author Joy Arellano
+ * @author Clark Rodriguez
+ */
 public class ImportScreenController {
     @FXML
     private TextField enterFile;
@@ -26,11 +33,19 @@ public class ImportScreenController {
     private String descString;
     private ObservableList<String> row;
     private static ObservableList<String> updateQueries = FXCollections.observableArrayList();
-    private static ObservableList<Item> list = FXCollections.observableArrayList();
-    private static ObservableList<Item> items = FXCollections.observableArrayList();
 
+    /**
+     * Sets the popup stage for the controller.
+     *
+     * @param popup The stage for the popup window.
+     */
     public void setPopup(Stage popup){this.popup = popup;}
 
+    /**
+     * Handles the action when the OK button is clicked.
+     *
+     * @throws FileNotFoundException If the specified file is not found.
+     */
     public void handleOK() throws FileNotFoundException{
         try{
             fileString = enterFile.getText();
@@ -47,7 +62,7 @@ public class ImportScreenController {
                 sizeInt = Integer.parseInt(partitions[3]);
                 unitString = partitions[4].replaceAll("'", "");
 
-                row = ItemController.seleectSQL(itemString);
+                row = ItemController.searchbyItem(itemString);
                 if(partitions[5].equals(".")){
                     colorString = "";
                 } else {
@@ -89,11 +104,20 @@ public class ImportScreenController {
                     updateQueries.add(updateQuery);
                 }
             }
+
         } catch (FileNotFoundException e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Invalid file name.");
             alert.show();
-        } catch (IOException | NumberFormatException | ArrayIndexOutOfBoundsException e){
+        } catch (IOException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setContentText("Invalid file-path");
+            alert.show();
+        } catch (NumberFormatException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setContentText("Content mismatch within csv file.");
+            alert.show();
+        } catch (ArrayIndexOutOfBoundsException e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Invalid .csv formatting");
             alert.show();
@@ -103,6 +127,12 @@ public class ImportScreenController {
         popup.close();
     }
 
+    /**
+     * Generates an SQL update query for an item.
+     *
+     * @param item The item for which the update query is generated.
+     * @return The SQL update query as a string.
+     */
     public String setUpdateQueries(Item item){
         String value1 = item.getSKU().replaceAll("'", "");
         String value2 = item.getItem().replaceAll("'", "");
@@ -114,7 +144,7 @@ public class ImportScreenController {
         String value8 = item.getType().replaceAll("'", "");
         String value9 = item.getDescription().replaceAll("'", "");
 
-        String SQL_UPDATE = "UPDATE Ingredient set SKU='" + value1 + "', Item='" +
+        String SQL_UPDATE = "UPDATE Item set SKU='" + value1 + "', Item='" +
                 value2 + "', Category='" + value3 + "', Brand='" +
                 value4 + "', Amount='" + value5 + "', Unit='" + value6
                 + "', Color='" + value7 + "', Type='" + value8
@@ -124,10 +154,17 @@ public class ImportScreenController {
         return SQL_UPDATE;
     }
 
+    /**
+     * Returns the list of update queries for existing items.
+     *
+     * @return The list of update queries.
+     */
     public static ObservableList<String> returnQueries(){return updateQueries;}
 
-    public static ObservableList<Item> returnList(){return list;}
-
+    /**
+     * Handles the action when the Cancel button is clicked.
+     * Closes the popup window without making any changes.
+     */
     public void handleCancel(){popup.close();}
 
 }

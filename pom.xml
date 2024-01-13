@@ -53,6 +53,15 @@
   </dependencies>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>src/main/resources/mp/ims/mpgroup4/assets</directory>
+        <targetPath>${project.build.directory}/classes/mp/ims/mpgroup4/assets</targetPath>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

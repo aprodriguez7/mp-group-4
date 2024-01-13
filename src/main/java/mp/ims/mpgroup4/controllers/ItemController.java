@@ -13,6 +13,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import primary.Main;
 
+import javax.swing.plaf.nimbus.State;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 
@@ -23,6 +27,25 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import java.util.*;
+
+/**
+ * The `ItemController` class is responsible for managing and controlling the interaction
+ * between the graphical user interface (GUI) and the underlying data model for items.
+ * It implements the Initializable interface to perform initialization tasks when the
+ * associated FXML file is loaded.
+ *
+ * This controller handles various actions such as adding, updating, restocking, and deleting items.
+ * It also provides methods for importing items from a CSV file, generating SKU codes, and interacting
+ * with a MySQL database to perform CRUD operations on item data.
+ *
+ * The SKU (Stock Keeping Unit) generation algorithm is based on the item's category, name, and a random
+ * 4-digit code. The class includes methods for handling JFX button events and updating the item table
+ * in the GUI.
+ *
+ * @author Arianne Acosta
+ * @author Joy Arellano
+ * @author Clark Rodriguez
+ */
 public class ItemController implements Initializable {
     @FXML
     private TableView<Item> itemTable;
@@ -52,53 +75,64 @@ public class ItemController implements Initializable {
 
     ObservableList<Item> listItems;
     ObservableList<String> rows;
+    /**
+     * Sets the main application instance for this controller.
+     *
+     * @param main The main application instance.
+     */
     public void setMain(Main main){
         this.main = main;
         itemTable.setItems(main.getItemData());
     }
 
+    /**
+     * Initializes the controller after its root element has been completely processed.
+     *
+     * @param url            The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resourceBundle The resources used to localize the root object, or null if the root object was not localized.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateTable();
     }
 
     //JFX BUTTON HANDLING
+    /**
+     * Handles the addition of a new item. Invoked when the add button is clicked.
+     *
+     * @throws IOException If an error occurs during the addition process.
+     */
     public void handleAdd() throws  IOException{
         addClicked = true;
         Item newItem = new Item();
 
         boolean okClicked = main.showAddScreen(newItem);
-        rows = seleectSQL(newItem.getItem());
+        rows = searchbyItem(newItem.getItem());
+        if (okClicked) {
+            Item existingItem = isExisting(newItem);
 
-        if(okClicked){
-            main.getItemData().add(newItem);
-            if(rows.isEmpty()){
+            if (existingItem != null) {
+                existingItem.setItemsize(existingItem.getItemsize() + newItem.getItemsize());
+                updateSQL(existingItem);
+            } else {
+                main.getItemData().add(newItem);
                 addSQL(newItem);
-                System.out.println("Before runLater");
-                Platform.runLater(() -> {
-                    System.out.println("Inside runLater");
-                    try {
-                        updateTable();
-                        itemTable.refresh();
-                        System.out.println("Table updated");
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
-                System.out.println("After runLater");
-
-            }else {
-                updateSQL(newItem);
-                Platform.runLater(() -> {
-                    updateTable();
-                    itemTable.refresh();
-                });
-                itemTable.refresh();
-                System.out.println("table updated via update");
             }
+
+            Platform.runLater(() -> {
+                updateTable();
+                itemTable.refresh();
+            });
+
+
         }
     }
 
+    /**
+     * Handles the update of an existing item. Invoked when the Update button is clicked.
+     *
+     * @throws IOException If an error occurs during the update process.
+     */
     public void handleUpdate() throws  IOException {
         Item chosenItem = itemTable.getSelectionModel().getSelectedItem();
 
@@ -116,6 +150,11 @@ public class ItemController implements Initializable {
         }
     }
 
+    /**
+     * Handles the restocking of an item. Invoked when the Restock button is clicked.
+     *
+     * @throws IOException If an error occurs during the restocking process.
+     */
     public void handleRestock() throws IOException {
         Item item = new Item();
 
@@ -127,6 +166,11 @@ public class ItemController implements Initializable {
         }
     }
 
+    /**
+     * Handles the usage of an item. Invoked when the Item Usage button is clicked.
+     *
+     * @throws IOException If an error occurs during the usage process.
+     */
     public void handleUsage() throws IOException {
         Item item = new Item();
 
@@ -137,6 +181,9 @@ public class ItemController implements Initializable {
         }
     }
 
+    /**
+     * Handles the deletion of an item. Invoked when the corresponding button is clicked.
+     */
     public void handleDelete() {
         try{
             int index = itemTable.getSelectionModel().getSelectedIndex();
@@ -150,6 +197,9 @@ public class ItemController implements Initializable {
         }
     }
 
+    /**
+     * Handles the import of items from a CSV file. Invoked when the corresponding button is clicked.
+     */
     public void handleImport() {
         try{
             Item item = new Item();
@@ -160,18 +210,38 @@ public class ItemController implements Initializable {
                 individualItem = ImportScreenController.returnQueries();
                 for (int i = 0; i < individualItem.size()-1; ++i){
                     updateSQLImport(individualItem.get(i));
-                    updateTable();
                 }
+                Platform.runLater(() -> {
+                    updateTable();
+                    itemTable.refresh();
+                });
             }
 
         } catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setContentText("Invalid .csv formatting.");
+            alert.setContentText("Invalid .csv input. Please ensure correct file-path");
 
             alert.show();
         }
     }
 
+    public void handleExport(){
+        try{
+            boolean okClicked = main.showExportScreen();
+        } catch (IOException e) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setContentText("Invalid file-path");
+
+            alert.show();
+        }
+    }
+    /**
+     * Generates an SKU for the given item based on its category and name. Invokes support method
+     * to generate the various components.
+     *
+     * @param item The item for which to generate the SKU.
+     * @return The generated SKU code.
+     */
     public static String generateSKU(Item item){
 
         String category = item.getCategory();
@@ -181,6 +251,13 @@ public class ItemController implements Initializable {
     }
 
     //SKU SUPPORT METHODS
+
+    /**
+     * Support Method for generating the Item's SKU
+     * @param category the String category of the item, for generating.
+     * @param item the Name of the item, for generating
+     * @return the generated SKU entry.
+     */
     private static String generateSKUSupport(String category, String item) {
 
         //Extracts first three consonants from the category
@@ -208,6 +285,12 @@ public class ItemController implements Initializable {
         return (categoryConsonants + "/" + itemConsonants + "-" + finalCode).toUpperCase();
     }
 
+    /**
+     * Support method. Invoked when generating SKU.
+     * @param input Item Name
+     * @param count indexing variable
+     * @return partitioned Consonants
+     */
     private static String getConsonants(String input, int count) {
         StringBuilder consonants = new StringBuilder();
         int consonantCount = 0;
@@ -239,9 +322,20 @@ public class ItemController implements Initializable {
         return consonants.toString();
     }
 
+    /**
+     * Support method for determining vowels within a given String
+     * @param ch Indexing character for String input
+     * @return True - ch is a Vowel, False - ch is not a Vowel
+     */
     private static boolean isVowel(char ch) {return "AEIOUaeiou".indexOf(ch) != -1;}
 
     //SQL METHODS
+
+    /**
+     * The `updateSQLImport` method updates the MySQL database by executing the provided SQL_UPDATE statement.
+     * It is primarily used for importing data from a CSV file.
+     * @param SQL_UDPATE The SQL statement to execute for updating the database.
+     */
     public static void updateSQLImport(String SQL_UDPATE){
         Connection connection = null;
         Statement statement = null;
@@ -269,6 +363,11 @@ public class ItemController implements Initializable {
 
     }
 
+    /**
+     * The `loadItems` method retrieves item data from the MySQL database and returns it as an ObservableList.
+     *
+     * @return An ObservableList containing Item objects loaded from the database.
+     */
     public static ObservableList<Item> loadItems(){
         Connection connection = null;
         PreparedStatement statement = null;
@@ -295,6 +394,11 @@ public class ItemController implements Initializable {
         return lists;
     }
 
+    /**
+     * The `addSQL` method adds a new item to the MySQL database using the provided Item object.
+     *
+     * @param item The Item object to be added to the database.
+     */
     public static void addSQL(Item item){
         Connection connection = null;
         PreparedStatement statement = null;
@@ -332,7 +436,13 @@ public class ItemController implements Initializable {
         }
     }
 
-    public static ObservableList<String> seleectSQL(String SKUCode){
+    /**
+     * The `searchbySKU` method searches for items in the database based on the given SKU code.
+     *
+     * @param SKUCode The SKU code used to search for items in the database.
+     * @return An ObservableList containing information about items matching the given SKU code.
+     */
+    public static ObservableList<String> searchbySKU(String SKUCode){
         Connection connection = null;
         PreparedStatement statement = null;
 
@@ -370,6 +480,53 @@ public class ItemController implements Initializable {
         return list;
     }
 
+    /**
+     * The `searchbyItem` method searches for items in the database based on the given item name.
+     *
+     * @param itemString The name of the item used to search for items in the database.
+     * @return An ObservableList containing information about items matching the given item name.
+     */
+    public static ObservableList<String> searchbyItem(String itemString){
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        ObservableList<String> list = FXCollections.observableArrayList();
+
+        try{
+            connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/Ratatouille?user=root&password=$Qlbench3r20");
+            statement = connection.prepareStatement("select * from Item WHERE Item='" + itemString + "'");
+            ResultSet resultSet = statement.executeQuery();
+
+            while(resultSet.next()){
+                list.add(resultSet.getString("SKU"));
+                list.add(resultSet.getString("Item"));
+                list.add(resultSet.getString("Category"));
+                list.add(resultSet.getString("Brand"));
+                list.add(Integer.toString(resultSet.getInt("Amount")));
+                list.add(resultSet.getString("Unit"));
+                list.add(resultSet.getString("Color"));
+                list.add(resultSet.getString("Type"));
+                list.add(resultSet.getString("Description"));
+            }
+        } catch (SQLException e) {
+            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+        } finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return list;
+    }
+
+    /**
+     * The `updateSQL` method updates an existing item in the MySQL database using the provided Item object.
+     *
+     * @param item The Item object containing updated information.
+     */
     public static void updateSQL(Item item){
         Connection connection = null;
         PreparedStatement statement = null;
@@ -410,6 +567,11 @@ public class ItemController implements Initializable {
         }
     }
 
+    /**
+     * The `deleteEntry` method deletes an item from the MySQL database based on the provided Item object.
+     *
+     * @param item The Item object to be deleted from the database.
+     */
     public static void deleteEntry(Item item){
         Connection connection = null;
         PreparedStatement statement = null;
@@ -440,6 +602,9 @@ public class ItemController implements Initializable {
         }
     }
 
+    /**
+     * The `updateTable` method refreshes the TableView in the GUI with the latest item data.
+     */
     public void updateTable(){
         skuCol.setCellValueFactory(cellData -> cellData.getValue().SKUProperty());
         itemCol.setCellValueFactory(cellData -> cellData.getValue().itemProperty());
@@ -455,11 +620,30 @@ public class ItemController implements Initializable {
         itemTable.setItems(listItems);
     }
 
+    /**
+     * The `handleExit` method exits the application when the corresponding button is clicked.
+     */
     @FXML
-    public void handleExit(){
-        System.exit(0);
+    public void handleExit(){System.exit(0);}
+
+    /**
+     * The `isExisting` method checks if the given Item object already exists in the main application's item data.
+     *
+     * @param item The Item object to check for existence.
+     * @return The existing Item object if found, or null if not found.
+     */
+    private Item isExisting(Item item){
+        for(Item existingItems : main.getItemData()){
+            if (existingItems.equals(item)){
+                return existingItems;
+            }
+        }
+        return null;
     }
 
-    //Manual Handling
+
+    /**
+     * Void method to handle opening the User Manual.
+     */
     public void openPDF(){main.pdf();}
 }

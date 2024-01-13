@@ -94,12 +94,12 @@
             <Circle layoutX="107.0" layoutY="93.0" radius="66.0" stroke="BLACK" strokeType="INSIDE" />
             <ImageView fitHeight="115.0" fitWidth="122.0" layoutX="48.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imageassets/fat-rat.png" />
+                  <Image url="@../../../../imageassets/fat-rat.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="36.0" fitWidth="169.0" layoutX="28.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Asset_1-removebg-preview.png" />
+                  <Image url="@../../../../imageassets/Asset_1-removebg-preview.png" />
                </image>
             </ImageView>
          </children>

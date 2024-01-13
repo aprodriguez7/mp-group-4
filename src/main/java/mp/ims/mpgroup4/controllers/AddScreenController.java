@@ -8,6 +8,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * Controller class for the AddScreen.fxml file, responsible for handling user interactions and managing data for adding or modifying items.
+ *
+ * @author Arianne Acosta
+ * @author Joy Arellano
+ * @author Clark Rodriguez
+ */
 public class AddScreenController {
     @FXML
     private TextField enterItem;
@@ -26,13 +33,23 @@ public class AddScreenController {
     @FXML
     private TextField enterDesc;
 
-    //Revise based on our implementation.
     private Stage popup;
     private Item item;
     public boolean okClicked = false;
     ObservableList<String> row = FXCollections.observableArrayList();
 
+    /**
+     * Sets the popup stage for the controller.
+     *
+     * @param popup The stage for the popup window.
+     */
     public void setPopup(Stage popup){this.popup = popup;}
+
+    /**
+     * Sets the item to be displayed and edited in the form.
+     *
+     * @param item The item to be displayed and edited.
+     */
     public void setItem(Item item){
         this.item = item;
 
@@ -46,6 +63,9 @@ public class AddScreenController {
         enterDesc.setText(item.getDescription());
     }
 
+    /**
+     * Handler method for when the OK button is clicked.
+     */
     public void handleOK(){
         try{
             if(enterItem.getText() == null){
@@ -79,7 +99,7 @@ public class AddScreenController {
             }else {
                 item.setItem(enterItem.getText());
 
-                row = ItemController.seleectSQL(item.getItem());
+                row = ItemController.searchbySKU(item.getItem());
 
                 item.setCategory(enterCategory.getText());
                 item.setBrand(enterBrand.getText());
@@ -114,9 +134,14 @@ public class AddScreenController {
         }
     }
 
+    /**
+     * Handles the action when the Search button is clicked.
+     * Searches for an item and populates the form with its details if found.
+     */
     public void handleSearch(){
+
         item.setItem(enterItem.getText());
-        row = ItemController.seleectSQL(item.getItem());
+        row = ItemController.searchbyItem(item.getItem());
 
         if(!row.isEmpty()){
             enterCategory.setText(row.get(2));
@@ -130,7 +155,12 @@ public class AddScreenController {
             alert.setContentText("Item does not exist!");
             alert.show();
         }
+
     }
 
+    /**
+     * Handles the action when the Cancel button is clicked.
+     * Closes the popup window without making any changes.
+     */
     public void handleCancel(){popup.close();}
 }
